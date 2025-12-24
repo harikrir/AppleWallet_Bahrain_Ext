@@ -2,8 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var Q = require('q'); 
 var pluginID = null;
-var applicationGroup = "group.com.aub.mobilebanking";
-var UI_Identifier = "com.aub.mobilebanking.phone.eg.UIExt";
+var applicationGroup = "group.com.aub.mobilebanking.uat.bh";
+var UI_Identifier = "com.aub.mobilebanking.uat.bh.wallet.ui";
 
 function redError(message) {
     return new Error(pluginID + '" \x1b[1m\x1b[31m' + message + '\x1b[0m');

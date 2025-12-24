@@ -32,12 +32,12 @@
         </config-file>
         <config-file target="*/Entitlements-Debug.plist" parent="com.apple.security.application-groups">
             <array>
-                <string>group.com.aub.mobilebanking</string>
+                <string>group.com.aub.mobilebanking.uat.bh</string>
             </array>
         </config-file>
         <config-file target="*/Entitlements-Debug.plist" parent="keychain-access-groups">
             <array>
-                <string>$(AppIdentifierPrefix)com.aub.mobilebanking.phone.eg</string>
+                <string>$(AppIdentifierPrefix)com.aub.mobilebanking.uat.bh</string>
             </array>
         </config-file>
 
@@ -46,12 +46,12 @@
         </config-file>
         <config-file target="*/Entitlements-Release.plist" parent="com.apple.security.application-groups">
             <array>
-                <string>group.com.aub.mobilebanking</string>
+                <string>group.com.aub.mobilebanking.uat.bh</string>
             </array>
         </config-file>
         <config-file target="*/Entitlements-Release.plist" parent="keychain-access-groups">
             <array>
-                <string>$(AppIdentifierPrefix)com.aub.mobilebanking.phone.eg</string>
+                <string>$(AppIdentifierPrefix)com.aub.mobilebanking.uat.bh</string>
             </array>
         </config-file>
 
@@ -70,9 +70,9 @@
 
         <!-- Variables -->
         <variable name="IOS_DEVELOPMENT_TEAM" value="96TXWQ4R6A" />
-        <variable name="IOS_APP_GROUP" value="group.com.aub.mobilebanking" />
-        <variable name="NON_UI_BUNDLE_ID" value="com.aub.mobilebanking.phone.eg.NonExt" />
-        <variable name="UI_BUNDLE_ID" value="com.aub.mobilebanking.phone.eg.UIExt" />
+        <variable name="IOS_APP_GROUP" value="group.com.aub.mobilebanking.uat.bh" />
+        <variable name="NON_UI_BUNDLE_ID" value="com.aub.mobilebanking.uat.bh.wallet.ext" />
+        <variable name="UI_BUNDLE_ID" value="com.aub.mobilebanking.uat.bh.wallet.ui" />
         <variable name="USESWIFTLANGUAGEVERSION" value="5.0" />
 
         <variable name="NON_UI_PROV_PROFILE_DEBUG" value="NonUIdevsep.mobileprovision" />

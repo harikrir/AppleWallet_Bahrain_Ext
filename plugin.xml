@@ -69,7 +69,7 @@
         <framework src="WatchConnectivity.framework" />
 
         <!-- Variables -->
-        <variable name="IOS_DEVELOPMENT_TEAM" value="96TXWQ4R6A" />
+        <variable name="IOS_DEVELOPMENT_TEAM" value="T57RH2WT3W" />
         <variable name="IOS_APP_GROUP" value="group.com.aub.mobilebanking.uat.bh" />
         <variable name="NON_UI_BUNDLE_ID" value="com.aub.mobilebanking.uat.bh.wallet.ext" />
         <variable name="UI_BUNDLE_ID" value="com.aub.mobilebanking.uat.bh.wallet.ui" />

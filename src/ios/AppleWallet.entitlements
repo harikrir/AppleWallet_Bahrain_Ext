@@ -6,11 +6,11 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.aub.mobilebanking</string>
+		<string>group.com.aub.mobilebanking.uat.bh</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.aub.mobilebanking.phone.eg</string>
+		<string>$(AppIdentifierPrefix)group.com.aub.mobilebanking.uat.bh</string>
 	</array>
 </dict>
 </plist>

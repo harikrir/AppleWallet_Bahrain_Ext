@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.aub.mobilebanking.phone.eg" version="1.0.0">
+
+    <name>AppleWallet</name>
+    <description>iOS Apple Wallet plugin with UI and Non-UI Wallet extensions.</description>
+    <author>Enigma Labs</author>
+    <keywords>Apple,Wallet,iOS</keywords>
+    <license>Apache-2.0</license>
+    <engines>
+        <engine name="cordova" version=">=9.0.0" />
+    </engines>
+
+    <!-- iOS platform only -->
+    <platform name="ios">
+	
+	<dependency id="cordova-plugin-edit-plist-file" url="https://github.com/NirbyApp/cordova-plugin-edit-plist-file/tree/master"/>
+
+        <preference name="SwiftVersion" default="5.0" />
+        <variable name="SWIFTVERSION" value="5.0" />
+
+        <!-- UIDeviceFamily -->
+        <config-file target="*-Info.plist" parent="UIDeviceFamily">
+            <array>
+                <integer>1</integer>
+                <integer>2</integer>
+            </array>
+        </config-file>
+
+        <!-- Entitlements for Debug and Release -->
+        <config-file target="*/Entitlements-Debug.plist" parent="com.apple.developer.payment-pass-provisioning">
+            <true/>
+        </config-file>
+        <config-file target="*/Entitlements-Debug.plist" parent="com.apple.security.application-groups">
+            <array>
+                <string>group.com.aub.mobilebanking</string>
+            </array>
+        </config-file>
+        <config-file target="*/Entitlements-Debug.plist" parent="keychain-access-groups">
+            <array>
+                <string>$(AppIdentifierPrefix)com.aub.mobilebanking.phone.eg</string>
+            </array>
+        </config-file>
+
+        <config-file target="*/Entitlements-Release.plist" parent="com.apple.developer.payment-pass-provisioning">
+            <true/>
+        </config-file>
+        <config-file target="*/Entitlements-Release.plist" parent="com.apple.security.application-groups">
+            <array>
+                <string>group.com.aub.mobilebanking</string>
+            </array>
+        </config-file>
+        <config-file target="*/Entitlements-Release.plist" parent="keychain-access-groups">
+            <array>
+                <string>$(AppIdentifierPrefix)com.aub.mobilebanking.phone.eg</string>
+            </array>
+        </config-file>
+
+        <!-- JavaScript interface -->
+        <js-module src="www/appleWallet.js" name="AppleWallet">
+            <clobbers target="AppleWallet" />
+        </js-module>
+
+        <!-- Native iOS code -->
+        <header-file src="src/ios/CDVAppleWallet.h" />
+        <source-file src="src/ios/CDVAppleWallet.m" /> 
+
+        <!-- iOS frameworks -->
+        <framework src="PassKit.framework" />
+        <framework src="WatchConnectivity.framework" />
+
+        <!-- Variables -->
+        <variable name="IOS_DEVELOPMENT_TEAM" value="96TXWQ4R6A" />
+        <variable name="IOS_APP_GROUP" value="group.com.aub.mobilebanking" />
+        <variable name="NON_UI_BUNDLE_ID" value="com.aub.mobilebanking.phone.eg.NonExt" />
+        <variable name="UI_BUNDLE_ID" value="com.aub.mobilebanking.phone.eg.UIExt" />
+        <variable name="USESWIFTLANGUAGEVERSION" value="5.0" />
+
+        <variable name="NON_UI_PROV_PROFILE_DEBUG" value="NonUIdevsep.mobileprovision" />
+        <variable name="UI_PROV_PROFILE_DEBUG" value="UIDevsep.mobileprovision" />
+        <variable name="NON_UI_PROV_PROFILE_RELEASE" value="NonUidistSep.mobileprovision" />
+        <variable name="UI_PROV_PROFILE_RELEASE" value="UIDistSep.mobileprovision" />
+
+        <hook type="before_plugin_install" src="hooks/InstallNPM.js"/>
+        <hook type="before_plugin_install" src="hooks/MoveExtensionsFolders.js"/>
+		<hook type="after_plugin_install" src="hooks/CreateUIExtension.js"/>
+		<hook type="after_plugin_install" src="hooks/CreateNONUIExtension.js"/>
+        <hook type="after_plugin_install" src="hooks/MoveProvisioningProfilesMABS.js"/>
+        <hook type="after_plugin_install" src="hooks/UpdateBuildExportOptions.js"/>
+    </platform> 
+
+</plugin>

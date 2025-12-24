@@ -1,7 +1,7 @@
 import Foundation
 import Security
 
-let appGroupID: String = "group.com.aub.mobilebanking"
+let appGroupID: String = "com.aub.mobilebanking.uat.bh"
 let keychainStoreDataKey = "walletStatusToken"
 
 func saveDictionaryToKeychain(

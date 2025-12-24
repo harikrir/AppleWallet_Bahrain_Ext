@@ -9,7 +9,7 @@
 		<string>AppleWallet</string>
 
 		<key>CFBundleIdentifier</key>
-		<string>com.aub.mobilebanking.phone.eg.NonExt</string>
+		<string>com.aub.mobilebanking.uat.bh.wallet.ext</string>
 
 		<key>CFBundleExecutable</key>
 		<string>$(EXECUTABLE_NAME)</string>

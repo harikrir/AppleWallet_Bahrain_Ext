@@ -2,15 +2,15 @@ var fs = require('fs');
 var path = require('path');
 var Q = require('q'); 
 var pluginID = null;
-var applicationGroup = "group.com.aub.mobilebanking";
+var applicationGroup = "group.com.aub.mobilebanking.uat.bh";
 
-var NONUI_Identifier = "com.aub.mobilebanking.phone.eg.NonExt";
-var UI_Identifier = "com.aub.mobilebanking.phone.eg.UIExt";
+var NONUI_Identifier = "com.aub.mobilebanking.uat.bh.wallet.ext";
+var UI_Identifier = "com.aub.mobilebanking.uat.bh.wallet.ui";
 
-var UI_Provisioning = "454522c5-89aa-436b-87dd-6427860428a3";
-var NONUI_Provisioning = "e69abc30-0bef-4922-988a-087b60825ff1";
+var UI_Provisioning = "c7d67bee-b159-4f67-8221-b9f633d68049";
+var NONUI_Provisioning = "0edb1318-c5ab-401d-bbe2-373350ddea2b";
 
-var BANKTeamID = "96TXWQ4R6A";
+var BANKTeamID = "T57RH2WT3W";
 
 function redError(message) {
     return new Error('"' + pluginID + '" \x1b[1m\x1b[31m' + message + '\x1b[0m');
